@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f9a825</color>
+    <color name="colorPrimaryDark">#f57f17</color>
+    <color name="colorAccent">#1b5e20</color>
+    <color name="black_semi_transparent">#B2000000</color>
+    <color name="background">#e5e5e5</color>
+    <color name="half_black">#808080</color>
+    <color name="white">#ffffff</color>
+    <color name="white_pressed">#f1f1f1</color>
+    <color name="pink">#e91e63</color>
+    <color name="pink_pressed">#ec407a</color>
+    <color name="yellow">#fbc02d</color>
+    <color name="yellow_pressed">#fdd835</color>
+    <color name="green">#1b5e20</color>
+    <color name="green1">#bb1b5e20</color>
+    <color name="green_pressed">#2e7d32</color>
+    <color name="blue_semi_transparent">#805677fc</color>
+    <color name="blue_semi_transparent_pressed">#80738ffe</color>
+    <color name="colorActionButton">#ffffff</color>
+    <color name="colorPrimaryLight">#5F71B5</color>
+    <color name="colorWindowBackground">#333</color>
+    <color name="colorBackground">#ffc800</color>
+    <color name="colorStatusBar">#ffa600</color>
+
+    <color name="weatherAccent">#84ceca</color>
+    <color name="grayIconTint">#727272</color>
+    <color name="galleryItemOverlay">#cc000000</color>
+    <color name="gradientPeriodicClouds_c1">#3453d1</color>
+    <color name="gradientPeriodicClouds_c2">#6d69ff</color>
+    <color name="gradientPeriodicClouds_c3">#cd47c6</color>
+
+    <array name="gradientPeriodicClouds">
+        <item>@color/gradientPeriodicClouds_c1</item>
+        <item>@color/gradientPeriodicClouds_c2</item>
+        <item>@color/gradientPeriodicClouds_c3</item>
+    </array>
+
+    <color name="gradientCloudy_c1">#62bff5</color>
+    <color name="gradientCloudy_c2">#61b3e5</color>
+    <color name="gradientCloudy_c3">#5d8fb2</color>
+
+    <array name="gradientCloudy">
+        <item>@color/gradientCloudy_c1</item>
+        <item>@color/gradientCloudy_c2</item>
+        <item>@color/gradientCloudy_c3</item>
+    </array>
+
+    <color name="gradientMostlyCloudy_c1">#51bbf5</color>
+    <color name="gradientMostlyCloudy_c2">#71c3ee</color>
+    <color name="gradientMostlyCloudy_c3">#f3e5d2</color>
+
+    <array name="gradientMostlyCloudy">
+        <item>@color/gradientMostlyCloudy_c1</item>
+        <item>@color/gradientMostlyCloudy_c2</item>
+        <item>@color/gradientMostlyCloudy_c3</item>
+    </array>
+
+    <color name="gradientPartlyCloudy_c1">#5b64be</color>
+    <color name="gradientPartlyCloudy_c2">#6084df</color>
+    <color name="gradientPartlyCloudy_c3">#64a2ff</color>
+
+    <array name="gradientPartlyCloudy">
+        <item>@color/gradientPartlyCloudy_c1</item>
+        <item>@color/gradientPartlyCloudy_c2</item>
+        <item>@color/gradientPartlyCloudy_c3</item>
+    </array>
+
+    <color name="gradientClear_c1">#6d4fbe</color>
+    <color name="gradientClear_c2">#6c56be</color>
+    <color name="gradientClear_c3">#a189f1</color>
+
+    <array name="gradientClear">
+        <item>@color/gradientClear_c1</item>
+        <item>@color/gradientClear_c2</item>
+        <item>@color/gradientClear_c3</item>
+    </array>
+
+    <color name="colorPrimary1">#848cb7</color>
+    <color name="colorPrimaryDark1">#6d749f</color>
+    <color name="colorRed">#ff3943</color>
+    <color name="colorRedDark">#801b20</color>
+    <color name="colorGreenLight">#abffc0</color>
+    <color name="colorGreen">#247b37</color>
+    <color name="colorGreen1">#3eb959</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorAccent1">#FF4091</color>
+
+</resources>

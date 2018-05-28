@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   Copyright (C) 2013 Google Inc.
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    xmlns:fab="http://schemas.android.com/apk/res-auto">
+
+    <!-- MAIN SCREEN -->
+    <!--<LinearLayout android:id="@+id/screen_main" style="@style/LLScreen">
+        <TextView style="@style/GameTitle" />
+        <Button android:id="@+id/button_invite_players"
+            style="@style/MainScreenButton"
+            android:text="@string/invite_players" />
+        <TextView style="@style/MainScreenButtonBlurb"
+            android:text="@string/invite_players_explanation" />
+        <Button android:id="@+id/button_see_invitations"
+            style="@style/MainScreenButton"
+            android:text="@string/see_invitations" />
+        <TextView style="@style/MainScreenButtonBlurb"
+            android:text="@string/see_invitations_explanation" />
+        <Button android:id="@+id/button_camera_game"
+            style="@style/MainScreenButton"
+            android:text="camera game" />
+        <Button android:id="@+id/button_settings"
+            style="@style/MainScreenButton"
+            android:text="settings" />
+    </LinearLayout>-->
+    <LinearLayout android:id="@+id/screen_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/screen"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+        <!--<TextView style="@style/GameTitle" />-->
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/radar1"
+            android:layout_marginLeft="-120dp"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:text="MENU"
+            android:textAlignment="center"
+            android:id="@+id/textView2"
+            android:textColor="@color/white"
+            android:layout_marginTop="60dp"
+            android:textSize="40dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:gravity="center_horizontal"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="50dp">
+            <ImageButton
+                android:id="@+id/start_button"
+                android:src="@drawable/start"
+                android:background="@null"
+                android:adjustViewBounds="true"
+                android:visibility="visible"
+                style="@style/MainScreenButton"
+                tools:ignore="RtlHardcoded"
+                android:layout_height="60dp"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="0dp"
+                android:gravity="center_horizontal"/>
+            <ImageButton
+                android:id="@+id/options_button"
+                android:src="@drawable/options"
+                android:background="@null"
+                android:adjustViewBounds="true"
+                style="@style/MainScreenButton"
+                tools:ignore="RtlHardcoded"
+                android:layout_height="60dp"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="70dp"
+                android:gravity="center_horizontal"/>
+
+            <ImageButton
+                android:id="@+id/exit_button"
+                android:src="@drawable/exit"
+                android:background="@null"
+                android:adjustViewBounds="true"
+                style="@style/MainScreenButton"
+                tools:ignore="RtlHardcoded"
+                android:layout_height="60dp"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="140dp"
+                android:gravity="center_horizontal"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- after "START' button-->
+    <LinearLayout android:id="@+id/screen_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/screen"
+        android:gravity="center_horizontal">
+        <!--<TextView style="@style/GameTitle" />-->
+        <!--<Button android:id="@+id/button_invite_players"
+            android:visibility="gone"
+            style="@style/MainScreenButton"
+            android:text="@string/invite_players" />-->
+        <ImageButton
+            android:id="@+id/button_invite_players"
+            android:src="@drawable/more_players"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:background="@null"
+            android:adjustViewBounds="true"
+            android:visibility="gone"
+            style="@style/MainScreenButton"
+            tools:ignore="RtlHardcoded"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center_horizontal"/>
+        <TextView style="@style/MainScreenButtonBlurb"
+            android:id="@+id/invite_text"
+            android:visibility="gone"
+            android:layout_marginTop="-30dp"
+            android:text="@string/invite_players_explanation" />
+        <!--<Button android:id="@+id/button_see_invitations"
+            style="@style/MainScreenButton"
+            android:visibility="gone"
+            android:text="@string/see_invitations" />-->
+        <ImageButton
+            android:id="@+id/button_see_invitations"
+            android:src="@drawable/see_invintations"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:background="@null"
+            android:adjustViewBounds="true"
+            android:visibility="gone"
+            style="@style/MainScreenButton"
+            tools:ignore="RtlHardcoded"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="-40dp"
+            android:gravity="center_horizontal"/>
+        <TextView style="@style/MainScreenButtonBlurb"
+            android:id="@+id/see_invitation_text"
+            android:visibility="gone"
+            android:layout_marginTop="-30dp"
+            android:text="@string/see_invitations_explanation" />
+        <ImageButton
+            android:id="@+id/button_camera_game"
+            android:src="@drawable/one_player"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:background="@null"
+            android:adjustViewBounds="true"
+            android:visibility="gone"
+            style="@style/MainScreenButton"
+            tools:ignore="RtlHardcoded"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="-40dp"
+            android:gravity="center_horizontal"/>
+        <TextView style="@style/MainScreenButtonBlurb"
+            android:id="@+id/improve_skills"
+            android:visibility="gone"
+            android:layout_marginTop="-30dp"
+            android:text="Improve your skills." />
+        <!--<Button android:id="@+id/button_camera_game"
+            android:visibility="gone"
+            style="@style/MainScreenButton"
+            android:text="camera game" />-->
+        <Button android:id="@+id/button_settings"
+            android:visibility="gone"
+            style="@style/MainScreenButton"
+            android:text="settings" />
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <Button android:id="@+id/button_settings"
+                    android:visibility="gone"
+                    style="@style/MainScreenButton"
+                    android:layout_marginLeft="170dp"
+                    android:text="settings" />
+                <ImageButton
+                    android:id="@+id/button_back"
+                    android:src="@drawable/one_player"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:background="@null"
+                    android:adjustViewBounds="true"
+                    android:visibility="gone"
+                    android:layout_marginLeft="70dp"
+                    style="@style/MainScreenButton"
+                    tools:ignore="RtlHardcoded"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="-20dp"
+                    android:gravity="center_horizontal"/>
+            </RelativeLayout>
+        </LinearLayout>-->
+    </LinearLayout>
+
+    <!-- INVITATION POPUP -->
+    <LinearLayout android:id="@+id/invitation_popup" style="@style/InvPopup">
+        <TextView android:id="@+id/incoming_invitation_text" style="@style/InvPopupText" />
+        <Button android:id="@+id/button_accept_popup_invitation"
+            style="@style/InvPopupButton"
+            android:text="@string/accept_popup_invite" />
+    </LinearLayout>
+
+    <!-- "PLEASE WAIT" SCREEN -->
+    <LinearLayout android:id="@+id/screen_wait" style="@style/LLScreen">
+        <TextView style="@style/Blurb" android:text="@string/please_wait"
+            android:background="@drawable/screen"/>
+    </LinearLayout>
+
+    <!-- GAMEPLAY SCREEN -->
+    <LinearLayout android:id="@+id/screen_game" style="@style/LLScreen">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:id="@+id/layout"
+                android:layout_height="wrap_content">
+                <TextureView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/textureView"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    tools:ignore="ObsoleteLayoutParam">
+                </TextureView>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/radar1"
+                android:visibility="gone"
+                android:id="@+id/radar"
+                android:layout_alignParentLeft="true" />
+<!--
+            <com.yarolegovich.discretescrollview.DiscreteScrollView
+                android:id="@+id/forecast_city_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="60dp" />
+-->
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/redblip"
+                android:layout_marginTop="200dp"
+                android:id="@+id/blip"
+                android:visibility="invisible"
+
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+
+           <!-- <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="150dp"> -->
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="67dp"
+                    android:src="@drawable/heart"
+                    android:id="@+id/heart1"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginLeft="175dp"
+                    android:outlineProvider="bounds"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="67dp"
+                    android:src="@drawable/heart"
+                    android:id="@+id/heart2"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginLeft="230dp"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="67dp"
+                    android:src="@drawable/heart"
+                    android:id="@+id/heart3"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginLeft="285dp"
+                    tools:ignore="VectorDrawableCompat" />
+           <!-- </LinearLayout> -->
+
+            <ProgressBar
+                android:id="@+id/firstBar"
+                android:layout_width="200dp"
+                android:layout_marginLeft="75dp"
+                android:layout_marginTop="150dp"
+                android:visibility="gone"
+                android:layout_centerHorizontal="true"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/radar" />
+
+
+
+            <com.xw.repo.BubbleSeekBar
+                android:layout_width="match_parent"
+                android:layout_marginTop="250dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/seekBar"
+                app:bsb_bubble_color="#39796b"
+                app:bsb_track_color="#39796b"
+                app:bsb_bubble_text_color="@color/colorWhite"
+                app:bsb_second_track_color="#004d40"
+                app:bsb_max="1000"
+                app:bsb_min="0"
+                app:bsb_progress="100"
+                app:bsb_section_count="5"
+                app:bsb_section_text_position="bottom_sides"
+                app:bsb_show_progress_in_float="false"
+                app:bsb_show_section_mark="true"
+                app:bsb_show_section_text="true"
+                app:bsb_show_thumb_text="true"
+                android:visibility="invisible">
+            </com.xw.repo.BubbleSeekBar>
+
+            <ImageButton
+                android:id="@+id/addButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:layout_marginLeft="300dp"
+                android:layout_marginTop="100dp"
+                android:adjustViewBounds="true"
+                android:padding="0dp"
+                android:src="@drawable/add2"
+                android:background="@null"
+                tools:ignore="RtlHardcoded"  />
+
+            <TextView
+                android:text="METIMAS!!!"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:textColor="@color/colorAccent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="300dp"
+                android:id="@+id/textViewThrowing" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.aeappss.multiplayer.hitObjects.RecyclerView
+                    android:id="@+id/forecast_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:visibility="invisible"
+                    android:scaleType="centerInside" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+<!--
+                    <Button
+                        android:id="@+id/btn_smooth_scroll"
+                        style="?android:borderlessButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/btn_smooth_scroll"
+                        android:textAllCaps="true"/>
+                        -->
+                        <!--android:textColor="@color/weatherAccent" /> -->
+<!--
+                    <Button
+                        android:id="@+id/btn_transition_time"
+                        style="?android:borderlessButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/btn_transition_time"
+                        android:textAllCaps="true"
+                        android:textColor="@color/weatherAccent" />
+-->
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.yarolegovich.discretescrollview.DiscreteScrollView
+                android:id="@+id/forecast_city_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="5dp" />
+
+            <TextView
+                android:id="@+id/instructions"
+                android:text="@string/instructions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="300dp"
+                android:padding="250dp"/>
+            <TextView
+                android:id="@+id/my_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="300dp"
+                android:padding="300dp"/>
+            <TextView
+                android:id="@+id/ARtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="100dp"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="205dp"
+                android:visibility="gone"
+                android:text="RADAU"
+                android:textSize="50dp"
+                android:textColor="@color/colorPrimaryLight" />
+
+            <Button
+                android:id="@+id/button_click_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/colorAccent"
+
+                android:text="@string/click_me"
+                android:layout_marginBottom="100dp"
+                android:layout_marginLeft="170dp"
+                android:visibility="invisible"
+                android:layout_marginTop="215dp"/> <!--style="@style/GameButton"-->
+
+
+            <ImageButton
+                android:id="@+id/action_map"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="24dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="140dp"
+                android:background="@drawable/map" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/person"
+                android:layout_marginBottom="24dp"
+                android:layout_marginLeft="125dp"
+                android:layout_marginTop="310dp"
+                android:visibility="gone"
+                android:adjustViewBounds="true"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:background="@null"
+                tools:ignore="RtlHardcoded" />
+
+            <!--<TextView
+                android:id="@+id/textView"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:text="10"
+                android:textColor="@color/colorAccent"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="174dp"
+                android:layout_marginTop="225dp"
+                android:adjustViewBounds="true"
+                android:textSize="55dp"/>-->
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="130dp"
+                android:layout_height="97dp"
+                android:layout_marginBottom="24dp"
+                android:layout_marginLeft="125dp"
+                android:layout_marginTop="355dp"
+                android:adjustViewBounds="true"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/glossy_ball"
+                android:background="@null"
+                tools:ignore="RtlHardcoded"
+                android:visibility="invisible"/>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="150dp"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/changeLocationBtn"
+                    android:background="@null"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-10dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/ic_edit_location_black_24dp"
+                    android:elevation="10dp"/>
+
+                <TextView
+                    android:id="@+id/txtView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="25dp"
+                    android:layout_marginTop="10dp"
+                    android:text="100 m">
+                </TextView>
+
+                <!-- skaiciams kamuolys-->
+                <ImageButton
+                    android:id="@+id/imageButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/small_ball1"
+
+                    android:background="@null" />
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="25dp" />
+            </LinearLayout>
+
+
+
+
+
+
+
+            <com.getbase.floatingactionbutton.FloatingActionsMenu
+                android:visibility="gone"
+                android:id="@+id/multiple_actions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fab:fab_addButtonColorNormal="@color/green"
+                fab:fab_addButtonColorPressed="@color/green_pressed"
+                fab:fab_addButtonPlusIconColor="@color/yellow"
+                android:layout_marginBottom="24dp"
+                android:layout_marginLeft="275dp"
+                android:layout_marginTop="250dp"
+                tools:ignore="RtlHardcoded">
+
+                <com.getbase.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/map"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fab:fab_icon="@drawable/ic_location_on_black_24dp"
+                    fab:fab_colorNormal="@color/yellow"
+                    fab:fab_size="normal"
+                    fab:fab_colorPressed="@color/yellow_pressed"/>
+
+                <com.getbase.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/action_chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fab:fab_icon="@drawable/ic_chat_bubble_black_24dp"
+                    fab:fab_colorNormal="@color/yellow"
+                    fab:fab_size="normal"
+                    fab:fab_colorPressed="@color/yellow_pressed"/>
+
+                <com.getbase.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/action_task"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fab:fab_icon="@drawable/ic_assignment_black_24dp"
+                    fab:fab_colorNormal="@color/yellow"
+                    fab:fab_size="normal"
+                    fab:fab_colorPressed="@color/yellow_pressed"/>
+
+            </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+            <TextView
+                android:id="@+id/countdown"
+                android:layout_height="150dp"
+                android:layout_width="150dp"
+                android:layout_marginTop="50dp"/> <!-- style="@style/FigureLabel" -->
+
+            <TextView
+                android:id="@+id/score0"
+                android:layout_height="150dp"
+                android:layout_width="150dp"
+                android:layout_marginTop="100dp"/>
+            <TextView
+                android:id="@+id/score1"
+                android:layout_height="150dp"
+                android:layout_width="150dp"
+                android:layout_marginTop="150dp"/>
+
+            <TextView
+                android:id="@+id/score2"
+                android:layout_height="150dp"
+                android:layout_width="150dp" />
+
+            <TextView
+                android:id="@+id/score3"
+                android:layout_height="150dp"
+                android:layout_width="150dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="300dp"/>-->
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- MAPS SCREEN -->
+    <!--
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/maps"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.aeappss.multiplayer.MapsActivity" />
+    -->
+</FrameLayout>

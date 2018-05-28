@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Throw something!</string>
+    <string name="game_title">Throw something!</string>
+    <string name="game_blurb">A sample game that tests your ability to click a button. Can you click faster than your friends? Only one way to find out! To play this game with friends, you must sign in with Google.</string>
+    <string name="single_player">Single Player</string>
+    <string name="single_player_explanation">Get some practice!</string>
+    <string name="quick_game">Quick game</string>
+    <string name="invite_players">Invite friends</string>
+    <string name="see_invitations">See invitations</string>
+    <string name="quick_game_explanation">Challenge a random opponent.</string>
+    <string name="invite_players_explanation">Invite friends to play a game.</string>
+    <string name="see_invitations_explanation">See who is inviting you right now.</string>
+    <string name="inv_popup_text">Incoming invitation!</string>
+    <string name="accept_popup_invite">Accept!</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="please_wait">Please wait&#8230;</string>
+    <string name="instructions">Click the button as fast as you can!</string>
+    <string name="game_problem">An error occurred while starting the game. Please try again.</string>
+    <string name="click_me">Click me!</string>
+    <string name="is_inviting_you">is challenging you to a game!</string>
+    <string name="signin_other_error">There was an issue with sign in. Please try again later.</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="about">about</string>
+    <string name="about_text">This app allows you to view 3D models that you have downloaded, or open 3D models directly from your browser. Supports STL, OBJ, and PLY models. Tap the VR button at the bottom to view the model in your VR headset!\n\nCopyright © 2017 Dmitry Brant.</string>
+    <string name="load_sample">Load sample</string>
+    <string name="read_permission_failed">Please allow read permission to open model files.</string>
+    <string name="open_model">Open model…</string>
+    <string name="allow">please allow for camera access</string>
+    <string name="open_model_success">Model loaded successfully.</string>
+    <string name="open_model_error">Failed to load model.</string>
+    <string name="view_vr_not_loaded">Please load a model first.</string>
+
+    <string name="btn_smooth_scroll">Smooth scroll</string>
+    <string name="btn_transition_time">Transition time</string>
+    <string name="pref_key_transition_time" translatable="false">pref_key_transition_time</string>
+    <string name="dialog_seekbar_transition_time">Item transition time in millis</string>
+
+    <string name="positive_popup_text_default">You hit gamer111476.</string>
+    <string name="positive_popup_title_default">Congratulations!</string>
+    <string name="negative_popup_text_default">You have failed to complete the challenge. So close! Wanna have another go at it?</string>
+    <string name="negative_popup_title_default">Awww... Snap!</string>
+    <string name="exit_popup_title_default">Do you really want to quit the game?</string>
+</resources>

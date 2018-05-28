@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/screen"
+    tools:context="com.aeappss.multiplayer.SplashScreenActivity">
+<!--
+    <com.yarolegovich.discretescrollview.DiscreteScrollView
+        android:id="@+id/forecast_city_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="60dp" />
+-->
+
+
+    <!--
+        <ImageView
+            android:id="@+id/home"
+            style="@style/ClickableImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="32dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:tint="@android:color/white" />
+        -->
+
+
+    <TextView
+        style="@style/GameTitle"
+        android:textAlignment="center"
+        android:padding="50dp"
+        android:layout_marginTop="150dp"
+        tools:ignore="MissingConstraints"
+        android:id="@+id/textView2"
+        android:textColor="@color/green"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="26dp"
+        android:background="@drawable/radar1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="55dp" />
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/radar1"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2"
+        android:layout_marginTop="164dp" />
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/radar1"
+        android:layout_below="@+id/imageView3"
+        android:layout_alignStart="@+id/imageView2"
+        android:layout_marginStart="21dp" />
+
+
+
+</RelativeLayout>
